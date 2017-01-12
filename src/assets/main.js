@@ -4,7 +4,7 @@ $(function() {
   dataType: 'jsonp',
   success: function(response) {
       addCourses(response.courses.completed);
-      console.log('respo', response);
+      console.log('respo', response.courses.completed);
   }
 });
 
@@ -12,10 +12,10 @@ function addCourses(courses) {
 
   var $badges = $('#badges');
 
-  courses.forEach(function(course)
-  {
+  courses.forEach(function(course){
+
     var $course = $('<div/>', {
-      'class': 'course'
+      class: 'course'
     }).appendTo($badges);
 
    $('<h3/>',{
@@ -23,7 +23,7 @@ function addCourses(courses) {
     }).appendTo($course);
 
     $('<img/>',{
-      src: source.badge
+      src: course.badge
     }).appendTo($course);
 
     $('<a/>', {
