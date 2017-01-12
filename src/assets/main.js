@@ -18,7 +18,7 @@ function addCourses(courses) {
       'class': 'course'
     }).appendTo($badges);
 
-  /*  $('<h3/>',{
+   $('<h3/>',{
       text: course.title
     }).appendTo($course);
 
@@ -33,7 +33,7 @@ function addCourses(courses) {
     text: 'See Course'
   }).appendTo($course);
 
-})*/
+})
 }
 
 });
