@@ -1,10 +1,10 @@
 $(function() {
-
   $.ajax({
   url: 'https://www.codeschool.com/users/thoudy.json',
   dataType: 'jsonp',
   success: function(response) {
       addCourses(response.courses.completed);
+      console.log('respo', response);
   }
 });
 
@@ -12,11 +12,13 @@ function addCourses(courses) {
 
   var $badges = $('#badges');
 
-  courses.forEach(function(course){
+  courses.forEach(function(course)
+  {
     var $course = $('<div/>', {
       'class': 'course'
     }).appendTo($badges);
-    $('<h3/>',{
+
+  /*  $('<h3/>',{
       text: course.title
     }).appendTo($course);
 
@@ -31,7 +33,7 @@ function addCourses(courses) {
     text: 'See Course'
   }).appendTo($course);
 
-  })
+})*/
 }
 
 });
